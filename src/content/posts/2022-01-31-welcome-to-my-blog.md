@@ -4,7 +4,7 @@ title: Welcome To My Blog
 slug: /welcome
 date: 2022-01-30 19:10
 description: First blog post
-featuredImage: /assets/blog-image.jpg
+featuredImage: /assets/orange-sky-tree.jpg
 ---
 # Hello World!
 For many months I've wanted to start a blog, and now I'm finally doing it (It's not like this is a graded assignment for school or anything...). My reasons for starting a blog are mostly personal - I want to improve my writing skills, better understand topics I'm learning, and document my experiences! While I want to write a lot about learning web development, I also want to be able to write about anything else - like my current K-pop obsession, music I'm trying to make on Ableton, or video games I'm playing lately. 
