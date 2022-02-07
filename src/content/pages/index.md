@@ -3,9 +3,9 @@ template: index-page
 slug: /
 title: Emma Grey
 tagline: Web Developer, Musician, Gamer Girl
-featuredImage: /assets/annie-spratt-hx_hf2lppuu-unsplash.jpg
+featuredImage: /assets/orange-sky-tree.jpg
 cta:
   ctaText: Know more
   ctaLink: /about
 ---
-Welcome to my site! Read my blog posts, get to know me, or contact me. I hope you enjoy your time here!
+Welcome to my site! Read my blog posts, learn a little about me, or contact me directly. I hope you enjoy your time here!
