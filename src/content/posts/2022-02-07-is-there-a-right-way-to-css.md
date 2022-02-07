@@ -10,7 +10,7 @@ To CSS means to give life to a webpage. As a developer, I write CSS to give html
 
 Sometimes my CSS doesn't seem to be doing what I want it to. It is usually because of specificity errors due to how I referenced the html element. A reference by ID has a greater specificity than a reference by class, which is greater than a reference by type. It gets more complicated, so you can check out how specificity is calculated [here](https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity). 
 
-To dodge having to deal with the cascade or specificity, we will explore two different ways to approach CSS. The first is a naming convention called BEM, which gives developers a way to organize and modularize their CSS. The seccond is a CSS library called Tailwind, which is made up of pre-defined utility classes. You will learn that both are useful, and one is not better than the other. It is essentially up to the developer to choose or even use [both](https://aem.news/bem-tailwind/)!
+To dodge having to deal with the cascade or specificity, we will explore two different ways to approach CSS. The first is a naming convention called BEM, which gives developers a way to organize and modularize their CSS. The second is a CSS library called Tailwind, which is made up of pre-defined utility classes. You will learn that both are useful, and one is not better than the other. It is essentially up to the developer to choose or even use [both](https://aem.news/bem-tailwind/)!
 
 ## BEM
 
@@ -34,7 +34,7 @@ This acronym is a naming convention that describes a way to organize and name ht
 </div>
 ```
 
-This block represents a simple navigation bar, which we give a class name of "nav". Within the nav are elements, which in this case is the logo ("nav__logo"), the menu items ("nav__menu-item"), and the links ("nav__menu-item-link"). When writing the class name, these element names are separated by the block name with two underscores. If the block, element, or modifier is more than one word, they are separated by a single dash. The modifier is separated from the element or the block name with two dashes. 
+This block represents a simple navigation bar, which we give a class name of "nav". Within the nav are elements, which in this case is the logo, the menu items, and the links. When writing the class name, element names are separated by the block name with two underscores. If the block, element, or modifier is more than one word, they are separated by a single dash. The modifier is separated from the element or the block name with two dashes. 
 
 There are two modifiers in the code above, which is included for when the page is in dark mode. It applies just to the nav and nav menu, since the logo is not affected in this case. The modifier describes how the element changes, so adding "--dark" applies well here. 
 
@@ -66,3 +66,6 @@ Like BEM, only classes are used so the developer will never run into specificity
 It can take a while to memorize the class names, so having the docs on an open window is required for a bit. Some developers may want more freedom when designing and think Tailwind's classes are too constrictive. In addition, Tailwind may not be able to control all CSS properties, especially very new ones. But, as utility classes are becoming more popular lately, the Tailwind developers are probably eager to keep up with the latest new CSS. 
 
 Overall, there is nothing very bad about either of these CSS methodologies. Some might prefer one over the other for team projects or for use with certain frameworks. Once again, it is all really up to the developer. There is only one way to decide if you like it or not, and that is to use it. The right way to CSS is to enjoy it!
+
+image attribution: Photo by [Maik Jonietz](https://unsplash.com/@der_maik_?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/css-codeutm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) 
+  
