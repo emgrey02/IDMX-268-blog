@@ -1,12 +1,12 @@
 {
   "meta": {
-    "title": "Foundation",
+    "title": "Emma's Blog",
     "titleTemplate": "%s",
     "description": "A starter to launch your blazing fast personal website and a blog, Built with Gatsby and Netlify CMS. Made with ❤ by Stackrole",
-    "siteUrl": "https://foundation.stackrole.com",
-    "image": "/assets/stackrole.png",
-    "iconimage": "/assets/stackrole.png",
-    "twitterUsername": "@stackrole"
+    "siteUrl": "https://idmx268-emgrey02.netlify.app",
+    "image": "/assets/emma-face.jpg",
+    "iconimage": "/assets/icons8-sun-glasses-64-2-.png",
+    "twitterUsername": "@greyypse"
   },
   "ga": "UA-XXXXXXXXX-X"
 }
