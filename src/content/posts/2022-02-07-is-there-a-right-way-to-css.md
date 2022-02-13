@@ -1,6 +1,6 @@
 ---
 template: blog-post
-title: Is There A Right Way To CSS?
+title: Is There a Right Way To CSS?
 slug: /right-way-to-css
 date: 2022-02-06 19:18
 description: BEM vs Tailwind
@@ -55,7 +55,7 @@ Tailwind is a library of utility classes that developers can use in their projec
 
 It may look a little gross when you see the long line of classes. It certainly put me off a little bit. But, these class names are concise and clear in what they do. You can even have an idea of what the element looks like by skimming through the class names, but only after you've used and somewhat memorized them. Every class name and function is on Tailwind's [docs](https://tailwindcss.com/docs/), so there is no mistake on what each does. 
 
-In the above example, the first class is "px-6", which means that this button element will have 6 pixels of padding on it's x-axis, or left and right side. The next class, "h-12" means that the button is 12 pixels tall. 
+In the above example, the first class is "px-6", which means that this button element will have 6 pixels of padding on it's x-axis, or left and right side. The next class, "h-12" means that the button is 3 rem units tall. 
 
 Tailwind follows a kind of style guide. All box sizing and font sizes are written with rem units, meaning they are sized in relation to the root font size. It is usually 16px unless otherwise specified. In addition, other CSS functionality like hover, active, and focus states, as well as media queries are included as utility classes in pretty intuitive ways. 
 
@@ -65,7 +65,7 @@ Like BEM, only classes are used so the developer will never run into specificity
 #### Tailwind Downsides
 It can take a while to memorize the class names, so having the docs on an open window is required for a bit. Some developers may want more freedom when designing and think Tailwind's classes are too constrictive. In addition, Tailwind may not be able to control all CSS properties, especially very new ones. But, as utility classes are becoming more popular lately, the Tailwind developers are probably eager to keep up with the latest new CSS. 
 
-Overall, there is nothing very bad about either of these CSS methodologies. Some might prefer one over the other for team projects or for use with certain frameworks. Once again, it is all really up to the developer. There is only one way to decide if you like it or not, and that is to use it. The right way to CSS is to enjoy it!
+Overall, there is nothing very bad about either of these CSS methodologies. Some might prefer one over the other for team projects or for use with certain frameworks. Once again, it is all really up to the developer. There is only one way to decide if you like it or not, and that is to use it.
 
 image attribution: Photo by [Maik Jonietz](https://unsplash.com/@der_maik_?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/css-codeutm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) 
   
