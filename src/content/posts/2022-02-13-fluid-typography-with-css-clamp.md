@@ -38,7 +38,7 @@ What the clamp function does in this case is make the font-size 5% of the viewpo
 
 [![Image from Gyazo](https://i.gyazo.com/b2039753251ce038c9f0a7a7e7d21e5a.gif)](https://gyazo.com/b2039753251ce038c9f0a7a7e7d21e5a)
 
-The font-size starts at 44px since 5% of the viewport width is larger than 44px. Then, as the viewport gets smaller and 5% of the viewport width starts to be less than 44px, the font-size gradually get smaller and smaller. Finally, when the viewport gets small enough that 5% of the viewport width is less than 16px, the font-size locks at 16px. 
+The font-size starts at 44px since 5% of the viewport width is larger than 44px. Then, as the viewport gets smaller and 5% of the viewport width starts to be less than 44px, the font-size gradually gets smaller and smaller. Finally, when the viewport gets small enough that 5% of the viewport width is less than 16px, the font-size locks at 16px. 
 
 Underneath the surface, the clamp() function uses CSS min() and max() functions. If you are not familiar with them, you can learn about them on [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/max()). This is what our clamp function is rewritten as max() and min() functions:
 
