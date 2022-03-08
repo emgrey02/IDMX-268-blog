@@ -67,15 +67,16 @@ body.dark {
 Then, we define what happens when we attach the system class. Remember, we want the website to reflect the user's system preference with the `prefers-color-scheme` media query.
 
 ```css
+body.system {
+    --primary: blue;
+    --secondary: green;
+}
+
 @media (prefers-color-scheme: dark) {
     body.system {
         --primary: darkblue;
         --secondary: darkgreen;
     }
-}
-body.system {
-    --primary: blue;
-    --secondary: green;
 }
 ```
 
