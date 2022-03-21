@@ -83,19 +83,29 @@ A lot of what you *could* do with performance-heavy properties like `width` can 
 
 Here is an example of a performance-heavy way to scale a square. The animation changes the height and width property of the square.
 
+<figure>
+
 <iframe height="300" style="width: 100%;" scrolling="no" title="Untitled" src="https://codepen.io/emgrey02/embed/ExoybmZ?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href="https://codepen.io/emgrey02/pen/ExoybmZ">
   Untitled</a> by Emma Grey (<a href="https://codepen.io/emgrey02">@emgrey02</a>)
   on <a href="https://codepen.io">CodePen</a>.
 </iframe>
+<figcaption>Performance-Heavy Animation</figcaption>
+
+</figure>
 
 Here is an example of a fast performing animation that also scales a square. Instead, the animation changes the transform property using the scale function.
+
+<figure>
 
 <iframe height="300" style="width: 100%;" scrolling="no" title="cheap animation" src="https://codepen.io/emgrey02/embed/xxpOpOz?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href="https://codepen.io/emgrey02/pen/xxpOpOz">
   cheap animation</a> by Emma Grey (<a href="https://codepen.io/emgrey02">@emgrey02</a>)
   on <a href="https://codepen.io">CodePen</a>.
 </iframe>
+<figcaption>Fast Performing Animation</figcaption>
+
+</figure>
 
 You might notice how the change in width and height changes the layout of the page and actually causes it to increase its size to fit the square. Rather with the change in the transform property, the page is already set at an appropriate height and the browser does not have to spend energy increasing the size of the page. 
 
