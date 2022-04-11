@@ -42,37 +42,43 @@ At this point, it is really up to the developer. As long as the button is usable
 In our case, I will make our button an actual button HTML element.
 
 ```html
-
+<button class='button' type='button'>Get Started</button>
 ```
 
 Without any styling, this button will show up differently depending on the browser.
 
-Firefox button:
-[![Image from Gyazo](https://i.gyazo.com/380c4b1dbbfab9fa5fe9f0fdf789199a.jpg)](https://gyazo.com/380c4b1dbbfab9fa5fe9f0fdf789199a)
-Firefox button on hover:
-[![Image from Gyazo](https://i.gyazo.com/78ef49afe070d211ae635a571e107c2a.jpg)](https://gyazo.com/78ef49afe070d211ae635a571e107c2a)
-Firefox button on focus:
+Firefox button: <br>
+[![Image from Gyazo](https://i.gyazo.com/380c4b1dbbfab9fa5fe9f0fdf789199a.jpg)](https://gyazo.com/380c4b1dbbfab9fa5fe9f0fdf789199a)<br>
+Firefox button on hover:<br>
+[![Image from Gyazo](https://i.gyazo.com/78ef49afe070d211ae635a571e107c2a.jpg)](https://gyazo.com/78ef49afe070d211ae635a571e107c2a)<br>
+Firefox button on focus:<br>
 [![Image from Gyazo](https://i.gyazo.com/1beacf56e60805197479c0b3ac257bbb.jpg)](https://gyazo.com/1beacf56e60805197479c0b3ac257bbb)
 
 <hr>
 
-Chrome button:
-[![Image from Gyazo](https://i.gyazo.com/857ec5b5fa2dc1f37f2ab0ff191b4490.jpg)](https://gyazo.com/857ec5b5fa2dc1f37f2ab0ff191b4490)
-Chrome button on hover:
-[![Image from Gyazo](https://i.gyazo.com/27fb779dff1fe1a50556bb51177767da.jpg)](https://gyazo.com/27fb779dff1fe1a50556bb51177767da)
-Chrome button on focus:
-[![Image from Gyazo](https://i.gyazo.com/be9da9ae555cd1d80b71377a15437d13.jpg)](https://gyazo.com/be9da9ae555cd1d80b71377a15437d13)
+Chrome button:<br>
+[![Image from Gyazo](https://i.gyazo.com/857ec5b5fa2dc1f37f2ab0ff191b4490.jpg)](https://gyazo.com/857ec5b5fa2dc1f37f2ab0ff191b4490)<br>
+Chrome button on hover:<br>
+[![Image from Gyazo](https://i.gyazo.com/27fb779dff1fe1a50556bb51177767da.jpg)](https://gyazo.com/27fb779dff1fe1a50556bb51177767da)<br>
+Chrome button on focus:<br>
+[![Image from Gyazo](https://i.gyazo.com/be9da9ae555cd1d80b71377a15437d13.jpg)](https://gyazo.com/be9da9ae555cd1d80b71377a15437d13)<br>
 
 Since these buttons show up so differently depending on the browser, it is usually necessary to reset these styles and add our own. This makes it so the button will look the same across all browsers.
 
 To reset all button styles, we can apply these styles:
 
 ```css
-
+.button {
+	border: none;
+	background: transparent;
+	padding: 0;
+	cursor: pointer;
+	font-family: inherit;
+}
 ```
 
-Now our button looks just like any other text on the page, giving no indication that it is a button other than the cursor change. It looks this way on any browser.
-[![Image from Gyazo](https://i.gyazo.com/dfcc1e5b877624b4ad5b8b3bd49e9d32.png)](https://gyazo.com/dfcc1e5b877624b4ad5b8b3bd49e9d32)
+Now our button looks just like any other text on the page, giving no indication that it is a button other than the cursor change. It looks this way on any browser.<br>
+[![Image from Gyazo](https://i.gyazo.com/dfcc1e5b877624b4ad5b8b3bd49e9d32.png)](https://gyazo.com/dfcc1e5b877624b4ad5b8b3bd49e9d32)<br>
 
 Now we can recreate our button with the styling we want for our page. A lot of it is under the developer's discretion, but there are some important points for accessibility that should be considered.
 
@@ -96,7 +102,29 @@ For our example, our website background will be an off-white color. Our button w
 All contrast checks are passing! Now we can apply these colors to our button, knowing well that there is proper contrast between every state. By pressing the "copy to clipboard" button, we copy the color values we made attached to CSS custom properties that we can include in our project with ease. 
 
 ```css
+:root {
+	--surface: #e6e6ef;
+	--background: #4f8c53;
+	--color: #000000;
+	--focus-background: #213914;
+	--focus-color: #e6e6ef;
+}
 
+.button {
+	border: none;
+	background: var(--background);
+	color: var(--color);
+	padding: 0.25em  0.75em;
+	cursor: pointer;
+	font-family: inherit;
+	font-size: inherit;
+	border-radius: .5em;
+}
+
+.button:hover {
+	background: var(--focus-background);
+	color: var(--focus-color);
+}
 ```
 
 [![Image from Gyazo](https://i.gyazo.com/f725ccedc4879ee32fc03a1e1e6cf88e.gif)](https://gyazo.com/f725ccedc4879ee32fc03a1e1e6cf88e)
@@ -106,10 +134,12 @@ All contrast checks are passing! Now we can apply these colors to our button, kn
 Since our colors are in order, now we can focus (...get it?) on the different button states. We've started to implement the `:hover` state since we have colors for it, but we might want to add a transition to make the color change less jarring. This can be done with one line of code.
 
 ```css
-
+.button {
+	transition: 200ms all ease-in-out;
+}
 ```
 
-Putting this CSS declaration here will apply the transition to and from all button states!
+Putting this CSS declaration here will apply the transition to and from all button states!<br>
 [![Image from Gyazo](https://i.gyazo.com/78f5be119bc76aa4527208733c2c3b89.gif)](https://gyazo.com/78f5be119bc76aa4527208733c2c3b89)
 
 ## :focus
@@ -117,7 +147,14 @@ Putting this CSS declaration here will apply the transition to and from all butt
 For the button's `:focus` state, the browser adds an outline to the element. The last thing the developer should do is remove the outline and call it a day. We want to make sure that the focus state is clear and distinguishable for keyboard users. It does not have to be done with an outline - it can be done in other ways like underline, box-shadow, or border. In our case I'm going to use the box-shadow property but basically create an outline. The reason I'm doing this is because the animation will apply to box-shadow but not outline. Since a button can be in `:hover` and `:focus` state at the same time, I will make the outline color a darker green (almost black).
 
 ```css
+:root {
+	--focus-border: #080e05;
+}
 
+.button:focus {
+	outline: none;
+	box-shadow: 0 0 0 3px var(--focus-border);
+}
 ```
 
 [![Image from Gyazo](https://i.gyazo.com/a9596e09d62295899b05c88def6b2682.gif)](https://gyazo.com/a9596e09d62295899b05c88def6b2682)
@@ -133,7 +170,11 @@ The button's `:active` states comes into play as:
 It is important to have a style on this pseudo class, but it doesn't have to be terribly different from other button states. In our instance, it is perfectly fine for it to have the same styles as our hover state. We can simply add the pseudo-class to the `.button:hover` selector.
 
 ```css
-
+.button:hover,
+.button:active {
+	background: var(--focus-background);
+	color: var(--focus-color);
+}
 ```
 
 ## :disabled
