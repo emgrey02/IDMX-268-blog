@@ -4,6 +4,7 @@ title: Creating Accessible Buttons
 slug: /creating-accessible-buttons
 date: 2022-04-10 19:50
 description: creating accessible buttons
+featuredImage: /assets/katya-austin-i4ysi1zwq_w-unsplash.jpg
 ---
 # Creating Accessible Buttons
 
