@@ -12,11 +12,11 @@ On almost every web page there are buttons. It is hard not to encounter one on a
 
 We will learn about button functionality and styling by creating one from scratch.
 
-This button we will create will be a "Get Started" button, which will trigger a popup modal and ask the user for their information in a form. A button like this is on [Medium](https://medium.com/)'s home page. Let's think about how to start implementing it. 
+It will be a "Get Started" button, which will trigger a popup modal and ask the user for their information in a form. A button like this is on [Medium](https://medium.com/)'s home page. Let's think about how to start implementing it. 
 
 # Semantic HTML
 
-The first thing to consider is how to represent a button in the markup. There is the button `<button>` element, but there is also the link/anchor `<a>` element. Choosing which element to use can sometimes be confusing. Delving into each element's native functionality might clear up some of the confusion.
+The first thing to consider is how to represent a button in the markup. There is the button `<button>` element, but there is also the link/anchor `<a>` element. Choosing which element to use can sometimes be confusing.
 
 Links generally navigate the user to some other place on the web. That means either somewhere else on current page, or to another web site. The anchor element has a `href` attribute that accepts a URL, unlike the button element. 
 
@@ -166,7 +166,7 @@ The button's `:active` states comes into play as:
 
 * a touchscreen user touches the button
 * a mouse user clicks the button
-* a keyboard user pressed spacebar on a focused button
+* a keyboard user presses spacebar on a focused button
 
 It is important to have a style on this pseudo class, but it doesn't have to be terribly different from other button states. In our instance, it is perfectly fine for it to have the same styles as our hover state. We can simply add the pseudo-class to the `.button:hover` selector.
 
@@ -180,4 +180,19 @@ It is important to have a style on this pseudo class, but it doesn't have to be 
 
 ## :disabled
 
-The `:disabled` state of a button
+The `:disabled` state of a button is somewhat complicated. For starters, I don't think it is a very common thing to want to disable a button. But, if a certain requirement needs to be satisfied before being able to use a button, then it is important to make that known to the user. 
+
+What I've gathered is that using the *disabled* attribute on a button can be made more accessible by instead using the `aria-disabled='true'` attribute. 
+
+The concern is that when a button is disabled through the *disabled* HTML attribute, the user cannot focus on the button. While that seems fine at first thought, it might leave the user frustrated as to why they cannot focus on it. There is nothing that lets the user know why it is not able to be focused. They might just think that your website is broken. 
+
+Rather, with the aria attribute, the button is focusable and semantically it is still a disabled button. In addition, however, the button is clickable with the aria attribute, so the developer needs to disable whatever happens on click when this aria attribute is applied. Also, the idea is that the developer will add a small tooltip of some sort to tell the user why the button is disabled. Overall, with this implementation, usability is much better.
+
+Since our button does not need to be disabled, I will not include an implementation of it. If you want a more in-depth look into accessible disabled buttons, however, read the CSS-Tricks article called [Making Disabled Buttons More Inclusive](https://css-tricks.com/making-disabled-buttons-more-inclusive/) by Sandrina Pereira. 
+
+## Conclusion
+By following these steps, every button you create will be accessible. What I did not cover was how to make a functional and accessible button that is neither a link or button HTML element by using aria attributes. There is a very helpful article by Paul J. Adam on [deque.com](https://www.deque.com/) called [Building Accessible Button with ARIA: A11y Support Series](https://www.deque.com/blog/accessible-aria-buttons/) that goes in-depth on what aria attributes to use and when.
+
+I hope this helps someone on their web development journey!
+
+Photo by [Katya Austin](https://unsplash.com/@katya?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/button-press?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
